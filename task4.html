@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bookmark</title>
+  <style>
+    
+    @media (max-width: 768px) {
+      #nav-links-id, #hero-id, #tab-simple, #tab-speedy, #tab-easy, #browser-cards-id { flex-direction: column !important; align-items: center !important; }
+      #hero-id > div, #tab-simple > div, #tab-speedy > div, #tab-easy > div { flex: unset !important; width: 100% !important; text-align: center !important; padding: 0 !important; }
+      #browser-cards-id > div { margin-top: 0 !important; }
+      #nav-links-id { display: none !important; }
+    }
+  </style>
+</head>
+<body style="margin: 0; font-family: sans-serif;" >
+<div style="display: flex; justify-content: space-between; align-items: center; margin-top: 4%; padding: 0 10%; flex-wrap: wrap; gap: 16px;">
+<img src="logo-bookmark.svg" >
+
+<div id="nav-links-id" style="display: flex; align-items: center; gap: 30px; flex-wrap: wrap;">
+  <button onmouseover="this.style.color='#fa5757'" onmouseout="this.style.color='#242a45'" style="border: none; background: none; font-size: 14px; letter-spacing: 1.5px; cursor: pointer; color: #242a45; font-weight: bold; transition: color 0.15s ease;">FEATURES</button>
+  <button onmouseover="this.style.color='#fa5757'" onmouseout="this.style.color='#242a45'" style="border: none; background: none; font-size: 14px; letter-spacing: 1.5px; cursor: pointer; color: #242a45; font-weight: bold; transition: color 0.15s ease;">PRICING</button>
+  <button onmouseover="this.style.color='#fa5757'" onmouseout="this.style.color='#242a45'" style="border: none; background: none; font-size: 14px; letter-spacing: 1.5px; cursor: pointer; color: #242a45; font-weight: bold; transition: color 0.15s ease;">CONTACT</button>
+</div>
+
+<div>
+  <button onmouseover="this.style.backgroundColor='white'; this.style.color='#fa5757'; this.style.borderColor='#fa5757';" onmouseout="this.style.backgroundColor='#fa5757'; this.style.color='white'; this.style.borderColor='#fa5757';" style="border-radius: 5px; background-color: #fa5757; color: white; border: 2px solid #fa5757; padding: 10px 24px; font-size: 14px; letter-spacing: 1.5px; font-weight: bold; cursor: pointer; transition: all 0.15s ease;">LOGIN</button>
+</div>
+
+</div>
+
+<div id="hero-id" style="display: flex; justify-content: space-between; align-items: center; margin-top: 7%; padding: 0 10%; flex-wrap: wrap; gap: 30px;">
+
+            <div style="flex: 1;">
+              <h1 style="color: #242a45; font-size: 44px; font-weight: 500;">A Simple Bookmark <br> Manager </h1>
+              <p style="color: #9194a1; line-height: 1.6;"> A clean and Simple interface to organize your favourite<br> websites. Open a new browsers tab and see your sites load instantly. Try it for free </p>
+              <div style="display: flex; align-items: center; gap: 16px;">
+              <button onmouseover="this.style.backgroundColor='white'; this.style.color='#536dfe'; this.style.border='2px solid #536dfe'; this.style.padding='12px 18px';" onmouseout="this.style.backgroundColor='#536dfe'; this.style.color='white'; this.style.border='none'; this.style.padding='12px 20px';" style="border-radius: 5px; background-color: #536dfe; color: white; border: none; padding: 12px 20px; font-size: 14px; cursor: pointer; font-weight: bold; box-shadow: 0px 4px 6px rgba(0,0,0,0.1); transition: all 0.15s ease;">GET IT ON CHROME</button>
+              <button onmouseover="this.style.backgroundColor='white'; this.style.color='#242a45'; this.style.border='2px solid #242a45'; this.style.padding='12px 18px';" onmouseout="this.style.backgroundColor='#f1f1f1'; this.style.color='#242a45'; this.style.border='none'; this.style.padding='12px 20px';" style="border-radius: 5px; background-color: #f1f1f1; color: #242a45; border: none; padding: 12px 20px; font-size: 14px; cursor: pointer; font-weight: bold; box-shadow: 0px 4px 6px rgba(0,0,0,0.05); transition: all 0.15s ease;">GET IT ON FIREFOX</button>
+              </div>
+            </div>
+
+            <div style="flex: 1; text-align: right;">
+              <img src="illustration-features-tab-1.svg" style="width: 100%;">
+            </div>
+
+</div>
+
+<div style="text-align: center; margin-top: 10%; padding: 0 10%;">
+
+<h1 style="color: #242a45;">FEATURES</h1>
+
+<p style="color: #9194a1; line-height: 1.6;">Our aim is to make it quick and easy for you to access your<br> favourite websites. Your bookmarks sync between your devices<br> so you can access them on the go.</p>
+
+</div>
+
+<div style="text-align: center; margin-top: 5%; display: flex; justify-content: center; gap: 5%; padding: 0 10%; flex-wrap: wrap;">
+  <button id="tab-btn-simple" onclick="changeTab('simple')" onmouseover="if(this.style.color !== 'rgb(36, 42, 69)') this.style.color='#fa5757'" onmouseout="if(this.style.borderBottomColor !== 'rgb(250, 87, 87)') this.style.color='gray'" style="border: none; background: none; font-size: 16px; cursor: pointer; padding-bottom: 15px; border-bottom: 4px solid #fa5757; color: #242a45; transition: color 0.15s ease;">Simple Bookmarking</button>
+  <button id="tab-btn-speedy" onclick="changeTab('speedy')" onmouseover="if(this.style.color !== 'rgb(36, 42, 69)') this.style.color='#fa5757'" onmouseout="if(this.style.borderBottomColor !== 'rgb(250, 87, 87)') this.style.color='gray'" style="border: none; background: none; font-size: 16px; cursor: pointer; padding-bottom: 15px; border-bottom: 4px solid transparent; color: gray; transition: color 0.15s ease;">Speedy Searching</button>
+  <button id="tab-btn-easy" onclick="changeTab('easy')" onmouseover="if(this.style.color !== 'rgb(36, 42, 69)') this.style.color='#fa5757'" onmouseout="if(this.style.borderBottomColor !== 'rgb(250, 87, 87)') this.style.color='gray'" style="border: none; background: none; font-size: 16px; cursor: pointer; padding-bottom: 15px; border-bottom: 4px solid transparent; color: gray; transition: color 0.15s ease;">Easy Sharing</button>
+</div>
+
+<hr style="margin-top: -1px; border: 0.5px solid #e5e5e5; width: 60%; margin-inline: auto; margin-bottom: 5%;">
+
+<div id="tab-simple" style="display: flex; justify-content: space-between; align-items: center; width: 80%; margin: 0 auto; flex-wrap: wrap; gap: 30px;">
+  <div style="flex: 1;">
+    <img src="illustration-features-tab-1.svg" alt="Bookmark Illustration" style="width: 90%;">
+  </div>
+  <div style="flex: 1; padding-left: 5%;">
+    <h2 style="color: #242a45; font-size: 32px;">Bookmark in one click</h2>
+    <p style="color: gray; line-height: 1.6;">Organize your bookmarks however you like. Our simple drag-and-drop interface gives you complete control over how you manage your favourite sites.</p>
+    <button style="background-color: #536dfe; color: white; border: none; padding: 12px 24px; border-radius: 5px; cursor: pointer; font-weight: bold;">More Info</button>
+  </div>
+</div>
+
+<div id="tab-speedy" style="display: none; justify-content: space-between; align-items: center; width: 80%; margin: 0 auto; flex-wrap: wrap; gap: 30px;">
+  <div style="flex: 1;">
+    <img src="illustration-features-tab-2.svg" alt="Search Illustration" style="width: 90%;">
+  </div>
+  <div style="flex: 1; padding-left: 5%;">
+    <h2 style="color: #242a45; font-size: 32px;">Intelligent search</h2>
+    <p style="color: gray; line-height: 1.6;">Our powerful search feature will help you find saved sites in no time at all. No need to trawl through all of your bookmarks.</p>
+    <button style="background-color: #536dfe; color: white; border: none; padding: 12px 24px; border-radius: 5px; cursor: pointer; font-weight: bold;">More Info</button>
+  </div>
+</div>
+
+<div id="tab-easy" style="display: none; justify-content: space-between; align-items: center; width: 80%; margin: 0 auto; flex-wrap: wrap; gap: 30px;">
+  <div style="flex: 1;">
+    <img src="illustration-features-tab-3.svg" alt="Sharing Illustration" style="width: 90%;">
+  </div>
+  <div style="flex: 1; padding-left: 5%;">
+    <h2 style="color: #242a45; font-size: 32px;">Share your bookmarks</h2>
+    <p style="color: gray; line-height: 1.6;">Easily share your bookmarks and collections with others. Create a shareable link that you can send at the click of a button.</p>
+    <button style="background-color: #536dfe; color: white; border: none; padding: 12px 24px; border-radius: 5px; cursor: pointer; font-weight: bold;">More Info</button>
+  </div>
+</div>
+
+<script>
+  function changeTab(tabName) {
+  
+    const simpleTab = document.getElementById('tab-simple');
+    const speedyTab = document.getElementById('tab-speedy');
+    const easyTab = document.getElementById('tab-easy');
+
+    const bSimple = document.getElementById('tab-btn-simple');
+    const bSpeedy = document.getElementById('tab-btn-speedy');
+    const bEasy = document.getElementById('tab-btn-easy');
+    
+    if (tabName === 'simple') {
+      simpleTab.style.display = 'flex';   
+      speedyTab.style.display = 'none';   
+      easyTab.style.display = 'none';   
+      
+      bSimple.style.borderBottomColor = '#fa5757'; bSimple.style.color = '#242a45';
+      bSpeedy.style.borderBottomColor = 'transparent'; bSpeedy.style.color = 'gray';
+      bEasy.style.borderBottomColor = 'transparent'; bEasy.style.color = 'gray';
+    } 
+    else if (tabName === 'speedy') {
+      simpleTab.style.display = 'none';   
+      speedyTab.style.display = 'flex';   
+      easyTab.style.display = 'none';     
+      
+      bSimple.style.borderBottomColor = 'transparent'; bSimple.style.color = 'gray';
+      bSpeedy.style.borderBottomColor = '#fa5757'; bSpeedy.style.color = '#242a45';
+      bEasy.style.borderBottomColor = 'transparent'; bEasy.style.color = 'gray';
+    } 
+    else if (tabName === 'easy') {
+      simpleTab.style.display = 'none';   
+      speedyTab.style.display = 'none';   
+      easyTab.style.display = 'flex';     
+      
+      bSimple.style.borderBottomColor = 'transparent'; bSimple.style.color = 'gray';
+      bSpeedy.style.borderBottomColor = 'transparent'; bSpeedy.style.color = 'gray';
+      bEasy.style.borderBottomColor = '#fa5757'; bEasy.style.color = '#242a45';
+    }
+  }
+</script>
+
+
+<div style="text-align: center; margin-top: 10%; padding: 0 10%;">
+
+<h1 style="color: #242a45;">Download the extension</h1>
+
+<p style="color: #9194a1; line-height: 1.6;">We've got more browsers in the pipeline. Please do let us know if<br>you've got a favourite you'd like us to prioritize.</p>
+
+</div>
+
+
+<div id="browser-cards-id" style="display: flex; justify-content: center; align-items: flex-start; gap: 30px; margin-top: 7%; text-align: center; font-family: sans-serif; padding: 0 10%; flex-wrap: wrap;">
+
+  <div style="box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.05); padding: 30px 20px; border-radius: 10px; width: 250px; background: white;">
+    <img src="logo-chrome.svg" alt="Chrome Logo" style="margin-bottom: 15px;">
+    <h3 style="margin: 10px 0 5px 0; color: #242a45;">Add to Chrome</h3>
+    <p style="color: #9194a1; font-size: 14px; margin-bottom: 25px;">Minimum version 62</p>
+    <div style="border-top: 4px dotted #f1f1f1; margin: 0 -20px 25px -20px;"></div>
+    <button style="background-color: #536dfe; color: white; border: none; padding: 14px 20px; border-radius: 5px; width: 100%; cursor: pointer; font-weight: bold; box-shadow: 0px 4px 6px rgba(83,109,254,0.15);">
+      ADD & INSTALL EXTENSION
+    </button>
+  </div>
+
+  <div style="box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.05); padding: 30px 20px; border-radius: 10px; width: 250px; background: white; margin-top: 20px;">
+    <img src="logo-firefox.svg" alt="Firefox Logo" style="margin-bottom: 15px;">
+    <h3 style="margin: 10px 0 5px 0; color: #242a45;">Add to Firefox</h3>
+    <p style="color: #9194a1; font-size: 14px; margin-bottom: 25px;">Minimum version 55</p>
+    <div style="border-top: 4px dotted #f1f1f1; margin: 0 -20px 25px -20px;"></div>
+    <button style="background-color: #536dfe; color: white; border: none; padding: 14px 20px; border-radius: 5px; width: 100%; cursor: pointer; font-weight: bold; box-shadow: 0px 4px 6px rgba(83,109,254,0.15);">
+      ADD & INSTALL EXTENSION
+    </button>
+  </div>
+
+  <div style="box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.05); padding: 30px 20px; border-radius: 10px; width: 250px; background: white; margin-top: 40px;">
+    <img src="logo-opera.svg" alt="Opera Logo" style="margin-bottom: 15px;">
+    <h3 style="margin: 10px 0 5px 0; color: #242a45;">Add to Opera</h3>
+    <p style="color: #9194a1; font-size: 14px; margin-bottom: 25px;">Minimum version 46</p>
+    <div style="border-top: 4px dotted #f1f1f1; margin: 0 -20px 25px -20px;"></div>
+    <button style="background-color: #536dfe; color: white; border: none; padding: 14px 20px; border-radius: 5px; width: 100%; cursor: pointer; font-weight: bold; box-shadow: 0px 4px 6px rgba(83,109,254,0.15);">
+      ADD & INSTALL EXTENSION
+    </button>
+  </div>
+
+</div>
+
+<div style="text-align: center; margin-top: 10%; padding: 0 10%;">
+
+<h1 style="color: #242a45;">Frequently Asked Questions</h1>
+
+<p style="color: #9194a1; line-height: 1.6;">Here are some of our FAQs. If you have any other questions<br> you'd like answered please feel free to email us.</p>
+
+</div>
+
+
+<div style="width: 50%; margin: 5% auto 0 auto;">
+
+<div style="border-top: 1px solid #ccc;">
+<button id="btn-s1" onclick="show('s1')" onmouseover="if(this.style.color !== 'rgb(250, 87, 87)') this.style.color='#fa5757'" onmouseout="if(this.style.color !== 'rgb(250, 87, 87)') this.style.color='#242a45'" style="border: none; background: none; font-size: 16px; cursor: pointer; width: 100%; text-align: left; padding: 20px 0; border-bottom: 1px solid #ccc; color: #242a45; display: flex; justify-content: space-between; align-items: center; transition: color 0.15s ease;">
+  <span>What is Bookmark?</span>
+  <svg id="arrow-s1" xmlns="http://www.w3.org/2000/svg" width="18" height="12" style="transition: transform 0.2s ease;"><path id="arrow-path-s1" fill="none" stroke="#536DFE" stroke-width="3" d="M1 1l8 8 8-8"/></svg>
+</button>
+<p id='s1' style="display: none; color: gray; line-height: 1.6; padding: 15px 0; margin: 0; border-bottom: 1px solid #ccc;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tincidunt justo eget ultricies fringilla. Phasellus blandit ipsum quis quam ornare mattis.</p>
+</div>
+
+<div>
+<button id="btn-s2" onclick="show('s2')" onmouseover="if(this.style.color !== 'rgb(250, 87, 87)') this.style.color='#fa5757'" onmouseout="if(this.style.color !== 'rgb(250, 87, 87)') this.style.color='#242a45'" style="border: none; background: none; font-size: 16px; cursor: pointer; width: 100%; text-align: left; padding: 20px 0; border-bottom: 1px solid #ccc; color: #242a45; display: flex; justify-content: space-between; align-items: center; transition: color 0.15s ease;">
+  <span>How can I request a new browser?</span>
+  <svg id="arrow-s2" xmlns="http://www.w3.org/2000/svg" width="18" height="12" style="transition: transform 0.2s ease;"><path id="arrow-path-s2" fill="none" stroke="#536DFE" stroke-width="3" d="M1 1l8 8 8-8"/></svg>
+</button>
+<p id='s2' style="display: none; color: gray; line-height: 1.6; padding: 15px 0; margin: 0; border-bottom: 1px solid #ccc;">
+Vivamus luctus eros aliquet convallis ultricies. Mauris augue massa, ultricies non ligula. Suspendisse imperdiet. Vivamus luctus eros aliquet convallis ultricies.
+</p>
+</div>
+
+<div>
+<button id="btn-s3" onclick="show('s3')" onmouseover="if(this.style.color !== 'rgb(250, 87, 87)') this.style.color='#fa5757'" onmouseout="if(this.style.color !== 'rgb(250, 87, 87)') this.style.color='#242a45'" style="border: none; background: none; font-size: 16px; cursor: pointer; width: 100%; text-align: left; padding: 20px 0; border-bottom: 1px solid #ccc; color: #242a45; display: flex; justify-content: space-between; align-items: center; transition: color 0.15s ease;">
+  <span>Is there a mobile app?</span>
+  <svg id="arrow-s3" xmlns="http://www.w3.org/2000/svg" width="18" height="12" style="transition: transform 0.2s ease;"><path id="arrow-path-s3" fill="none" stroke="#536DFE" stroke-width="3" d="M1 1l8 8 8-8"/></svg>
+</button>
+<p id='s3' style="display: none; color: gray; line-height: 1.6; padding: 15px 0; margin: 0; border-bottom: 1px solid #ccc;">
+  Sed consectetur quam id neque fermentum accumsan. Praesent luctus vestibulum dolor, ut condimentum urna vulputate eget. Cras fermentum velit vitae.
+</p>
+</div>
+
+<div>
+<button id="btn-s4" onclick="show('s4')" onmouseover="if(this.style.color !== 'rgb(250, 87, 87)') this.style.color='#fa5757'" onmouseout="if(this.style.color !== 'rgb(250, 87, 87)') this.style.color='#242a45'" style="border: none; background: none; font-size: 16px; cursor: pointer; width: 100%; text-align: left; padding: 20px 0; border-bottom: 1px solid #ccc; color: #242a45; display: flex; justify-content: space-between; align-items: center; transition: color 0.15s ease;">
+  <span>What about other Chromium browsers?</span>
+  <svg id="arrow-s4" xmlns="http://www.w3.org/2000/svg" width="18" height="12" style="transition: transform 0.2s ease;"><path id="arrow-path-s4" fill="none" stroke="#536DFE" stroke-width="3" d="M1 1l8 8 8-8"/></svg>
+</button>
+<p id='s4' style="display: none; color: gray; line-height: 1.6; padding: 15px 0; margin: 0; border-bottom: 1px solid #ccc;">
+  Integer condimentum ipsum id imperdiet finibus. Vivamus in placerat mi, at euismod dui. Aliquam vitae neque eget nisl gravida pellentesque non ut velit.
+</p>
+</div>
+
+<div style="text-align: center; margin-top: 40px;">
+<button onmouseover="this.style.backgroundColor='white'; this.style.color='#536dfe'; this.style.border='2px solid #536dfe'; this.style.padding='10px 22px';" onmouseout="this.style.backgroundColor='#536dfe'; this.style.color='white'; this.style.border='none'; this.style.padding='12px 24px';" style="background-color: #536dfe; color: white; border: none; padding: 12px 24px; border-radius: 5px; font-size: 14px; font-weight: bold; cursor: pointer; transition: all 0.15s ease; box-shadow: 0px 4px 6px rgba(0,0,0,0.05);">More info</button>
+</div>
+
+</div>
+<script>
+
+  function show(current){
+const s1 = document.getElementById('s1');
+const s2 = document.getElementById('s2');
+const s3 = document.getElementById('s3');
+const s4 = document.getElementById('s4');
+
+if(current === 's1'){
+  if(s1.style.display==='none'){
+    s1.style.display = 'block';
+    document.getElementById('arrow-s1').style.transform = 'rotate(180deg)';
+    document.getElementById('arrow-path-s1').setAttribute('stroke', '#fa5757');
+    document.getElementById('btn-s1').style.color = '#fa5757';
+  }
+  else{
+    s1.style.display = 'none';
+    document.getElementById('arrow-s1').style.transform = 'rotate(0deg)';
+    document.getElementById('arrow-path-s1').setAttribute('stroke', '#536DFE');
+    document.getElementById('btn-s1').style.color = '#242a45';
+  }
+
+}
+if(current==='s2'){
+  if(s2.style.display==='none'){
+    s2.style.display = 'block';
+    document.getElementById('arrow-s2').style.transform = 'rotate(180deg)';
+    document.getElementById('arrow-path-s2').setAttribute('stroke', '#fa5757');
+    document.getElementById('btn-s2').style.color = '#fa5757';
+  }
+  else{
+    s2.style.display = 'none';
+    document.getElementById('arrow-s2').style.transform = 'rotate(0deg)';
+    document.getElementById('arrow-path-s2').setAttribute('stroke', '#536DFE');
+    document.getElementById('btn-s2').style.color = '#242a45';
+  }
+
+
+
+
+}
+
+if(current==='s3'){
+  if(s3.style.display==='none'){
+    s3.style.display = 'block';
+    document.getElementById('arrow-s3').style.transform = 'rotate(180deg)';
+    document.getElementById('arrow-path-s3').setAttribute('stroke', '#fa5757');
+    document.getElementById('btn-s3').style.color = '#fa5757';
+  }
+  else{
+    s3.style.display = 'none';
+    document.getElementById('arrow-s3').style.transform = 'rotate(0deg)';
+    document.getElementById('arrow-path-s3').setAttribute('stroke', '#536DFE');
+    document.getElementById('btn-s3').style.color = '#242a45';
+
+  }
+}
+
+if(current==='s4'){
+  if(s4.style.display==='none'){
+    s4.style.display = 'block';
+    document.getElementById('arrow-s4').style.transform = 'rotate(180deg)';
+    document.getElementById('arrow-path-s4').setAttribute('stroke', '#fa5757');
+    document.getElementById('btn-s4').style.color = '#fa5757';
+  }
+  else{
+    s4.style.display = 'none';
+    document.getElementById('arrow-s4').style.transform = 'rotate(0deg)';
+    document.getElementById('arrow-path-s4').setAttribute('stroke', '#536DFE');
+    document.getElementById('btn-s4').style.color = '#242a45';
+  }
+
+
+}
+  }
+</script>
+<div style="background-color: #536dfe; color: white; text-align: center; padding: 70px 20px; font-family: sans-serif; margin-top: 8%; flex-wrap: wrap;">
+  
+  <p style="letter-spacing: 5px; font-size: 12px; font-weight: bold; margin-bottom: 30px; text-transform: uppercase; opacity: 0.9;">
+    35,000+ Already Joined
+  </p>
+  
+  <h2 style="font-size: 32px; font-weight: 500; margin-bottom: 35px; max-width: 450px; margin-inline: auto; line-height: 1.3;">
+    Stay up-to-date with what we're doing
+  </h2>
+  
+  <div style="display: flex; justify-content: center; align-items: flex-start; gap: 16px; flex-wrap: wrap;">
+    
+    <div id="inputWrapper" style="position: relative; width: 300px; text-align: left; background-color: transparent; border-radius: 5px;">
+      <input id="emailInput" type="email" placeholder="example@email.com" style="width: 100%; padding: 14px 20px; border-radius: 5px; border: 2px solid transparent; font-size: 14px; box-sizing: border-box; outline: none;">
+      
+      <span id="errorIcon" style="display: none; position: absolute; right: 16px; top: 14px;">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"><g fill="none" fill-rule="evenodd"><circle cx="10" cy="10" r="10" fill="#FA5757"/><rect width="2" height="8" x="9" y="5" fill="#FFF" rx="1"/><circle cx="10" cy="15" r="1" fill="#FFF"/></g></svg>
+      </span>
+
+      <p id="emailError" style="display: none; background-color: #fa5757; color: white; font-size: 11px; font-style: italic; margin: 0; padding: 6px 16px; border-bottom-left-radius: 5px; border-bottom-right-radius: 5px;">
+        Whoops, make sure it's an email
+      </p>
+    </div>
+    
+    <button onmouseover="this.style.backgroundColor='white'; this.style.color='#fa5757';" onmouseout="this.style.backgroundColor='#fa5757'; this.style.color='white';" onclick="validateEmail()" style="background-color: #fa5757; color: white; border: 2px solid #fa5757; padding: 12px 24px; border-radius: 5px; font-weight: bold; font-size: 14px; cursor: pointer; transition: all 0.15s ease;">
+      Contact Us
+    </button>
+    
+  </div>
+</div>
+
+<div style="background-color: #161926; padding: 30px 10%; display: flex; justify-content: space-between; align-items: center; font-family: sans-serif; flex-wrap: wrap; gap: 20px;">
+  
+  <div style="display: flex; align-items: center; gap: 60px; flex-wrap: wrap;">
+    
+    <img src="logo-bookmark.svg" style="filter: brightness(0) invert(1);">
+    
+    <div style="display: flex; gap: 40px;">
+      <a href="#" onmouseover="this.style.color='#fa5757'" onmouseout="this.style.color='white'" style="color: white; text-decoration: none; font-size: 13px; letter-spacing: 1.5px; font-weight: bold; text-transform: uppercase; transition: color 0.15s ease;">Features</a>
+      <a href="#" onmouseover="this.style.color='#fa5757'" onmouseout="this.style.color='white'" style="color: white; text-decoration: none; font-size: 13px; letter-spacing: 1.5px; font-weight: bold; text-transform: uppercase; transition: color 0.15s ease;">Pricing</a>
+      <a href="#" onmouseover="this.style.color='#fa5757'" onmouseout="this.style.color='white'" style="color: white; text-decoration: none; font-size: 13px; letter-spacing: 1.5px; font-weight: bold; text-transform: uppercase; transition: color 0.15s ease;">Contact</a>
+    </div>
+    
+  </div>
+  
+  <div style="display: flex; align-items: center; gap: 30px;">
+    <a href="#" style="cursor: pointer;">
+      <img src="icon-facebook.svg" alt="Facebook Link" style="width: 24px;" onmouseover="this.style.filter='invert(42%) sepia(85%) saturate(1241%) hue-rotate(334deg) brightness(101%) contrast(97%)';" onmouseout="this.style.filter='none';">
+    </a>
+    <a href="#" style="cursor: pointer;">
+      <img src="icon-twitter.svg" alt="Twitter Link" style="width: 24px;" onmouseover="this.style.filter='invert(42%) sepia(85%) saturate(1241%) hue-rotate(334deg) brightness(101%) contrast(97%)';" onmouseout="this.style.filter='none';">
+    </a>
+  </div>
+
+</div>
+
+<script>
+  function validateEmail() {
+    const input = document.getElementById('emailInput');
+    const error = document.getElementById('emailError');
+    const wrapper = document.getElementById('inputWrapper');
+    const errorIcon = document.getElementById('errorIcon');
+  
+    const valid = input.checkValidity() && input.value.trim() !== ""; 
+    
+    if (!valid) {
+   
+      input.style.border = '2px solid #fa5757';
+      input.style.borderBottomLeftRadius = '0px';  
+      input.style.borderBottomRightRadius = '0px';
+      wrapper.style.backgroundColor = '#fa5757';
+      error.style.display = 'block';
+      errorIcon.style.display = 'block';
+    } else {
+      
+      input.style.border = '2px solid transparent';
+      input.style.borderRadius = '5px';
+      wrapper.style.backgroundColor = 'transparent';
+      error.style.display = 'none';
+      errorIcon.style.display = 'none';
+    }
+  }
+</script>
+</body>
+</html>
